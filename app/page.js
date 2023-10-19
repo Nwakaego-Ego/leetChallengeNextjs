@@ -1,7 +1,8 @@
 import Leet from "./leet";
 import Todo from "./todo";
 import ShoppingCart from "./shoppingCart";
-import Input from "./InputMessage";
+import Input from "./input";
+import InputMessage from "./InputMessage";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       {/* <Todo /> */}
       {/* <ShoppingCart /> */}
       <Input />
+      {/* <InputMessage /> */}
     </main>
   );
 }
