@@ -3,6 +3,7 @@ import Todo from "./todo";
 import ShoppingCart from "./shoppingCart";
 import Input from "./input";
 import InputMessage from "./InputMessage";
+import Counter from "./counter";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
       {/* <Leet /> */}
       {/* <Todo /> */}
       {/* <ShoppingCart /> */}
-      <Input />
+      {/* <Input /> */}
       {/* <InputMessage /> */}
+      <Counter />
     </main>
   );
 }
