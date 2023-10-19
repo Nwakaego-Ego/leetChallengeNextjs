@@ -3,7 +3,7 @@ import Todo from "./todo";
 import ShoppingCart from "./shoppingCart";
 import Input from "./input";
 import InputMessage from "./InputMessage";
-import Counter from "./counter";
+import Counter from "./Counter/Counter";
 
 export default function Home() {
   return (
