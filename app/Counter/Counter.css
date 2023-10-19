@@ -45,14 +45,19 @@ body {
   position: relative;
 }
 
+.masterCard {
+  position: relative;
+  right: 35px;
+}
+
 /* Apply red background to the direct child of .container */
 .container > div {
   background-image: url("/master-bg.png");
   background-size: cover;
-  padding: 30px;
+  padding: 20px;
   max-width: 350px;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .header {
@@ -67,4 +72,45 @@ h4 {
 
 .logo-header {
   display: flex;
+}
+
+.card-valid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+.code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nwakaego {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.number {
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.valid {
+  position: relative;
+  top: 10px;
+}
+
+.date {
+  font-size: 12px;
+  margin-right: 24px;
+  margin-bottom: 15px;
+}
+
+.vd {
+  position: relative;
+  top: 60px;
 }

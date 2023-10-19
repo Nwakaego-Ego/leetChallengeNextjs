@@ -5,7 +5,7 @@ import "./globals.css";
 
 const InputMessage = () => {
   const [message, setMessage] = useState("");
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
   const isModalOpen = () => {
     setOpenModal(true);
@@ -30,7 +30,7 @@ const InputMessage = () => {
       </button>
       {/* <p>{message}</p> */}
       <Modal
-        isOpen={isModalOpen}
+        isOpen={openModal}
         onAfterOpen={isModalOpen}
         onRequestClose={modalClose}
         style={{

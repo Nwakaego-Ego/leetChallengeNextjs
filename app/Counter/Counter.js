@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+
 import "./Counter.css";
 
 const Counter = () => {
@@ -26,12 +27,19 @@ const Counter = () => {
             <div className="">
               <div className="header">
                 <img src="./master-logo.png" className="logo" />
-                <h4>Master Class</h4>
+                <h4 className="masterCard">Kaego's Card</h4>
                 <img src="./master-chip.png" className="chip" />
               </div>
               <div>
-                <p className="text-red-600">Card Number</p>
-                <p>6024 5893 2438 4801 </p>
+                <div className="card-valid">
+                  <div>Card Number</div>
+                  <div className="valid vd">Valid thru</div>
+                </div>
+                <div className="code">
+                  <div className="number">6024 5893 2438 4801 </div>
+                  <div className="date vd">04/17</div>
+                </div>
+                <p className="nwakaego">Nwakaego Nwaekpe</p>
               </div>
             </div>
           </div>
