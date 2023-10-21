@@ -4,6 +4,7 @@ import ShoppingCart from "./shoppingCart";
 import Input from "./input";
 import InputMessage from "./InputMessage";
 import Counter from "./Counter/Counter";
+import Tobe from "./tobe";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       {/* <ShoppingCart /> */}
       {/* <Input /> */}
       {/* <InputMessage /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <Tobe />
     </main>
   );
 }

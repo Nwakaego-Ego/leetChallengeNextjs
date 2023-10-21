@@ -138,7 +138,7 @@ import React, { useState, useEffect } from "react";
 import { useDebounce } from "use-debounce";
 import "./globals.css";
 
-const InputMessage = () => {
+const Input = () => {
   const [name, setName] = useState("");
   const [value] = useDebounce(name, 3000);
   const [showMessage, setShowMessage] = useState(false);
@@ -173,4 +173,4 @@ const InputMessage = () => {
   );
 };
 
-export default InputMessage;
+export default Input;
