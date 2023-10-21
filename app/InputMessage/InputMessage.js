@@ -1,11 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
-import "./globals.css";
+import { useDebounce } from "use-debounce";
+import "./lnputMessage.css";
 
 const InputMessage = () => {
   const [message, setMessage] = useState("");
   const [openModal, setOpenModal] = useState(true);
+  const [name, setName] = useState("");
+  const [value] = useDebounce(name, 3000);
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    setShowMessage(true);
+  };
 
   const isModalOpen = () => {
     setOpenModal(true);
@@ -19,16 +31,8 @@ const InputMessage = () => {
     setMessage(e.target.value);
   };
 
-  // useEffect(() => {
-  //   setOpenModal(true);
-  // }, []);
-
   return (
     <div className="p-10">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-10">
-        Submit
-      </button>
-      {/* <p>{message}</p> */}
       <Modal
         isOpen={openModal}
         onAfterOpen={isModalOpen}
@@ -46,7 +50,13 @@ const InputMessage = () => {
         }}
       >
         <div className="inputbox">
-          <input className="input" type="text" required="required" />
+          <input
+            className="input"
+            type="text"
+            required="required"
+            onChange={handleNameChange}
+            value={name}
+          />
           <span>Enter Name</span>
         </div>
         <button
@@ -56,6 +66,14 @@ const InputMessage = () => {
           close
         </button>
       </Modal>
+
+      <div className="min-h-screen flex items-center justify-center relative">
+        {(value || showMessage) && (
+          <p className="text-lime-500  bg-black p-10 rounded-full">
+            Hope you are having a swell day {value}
+          </p>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,40 @@
+body {
+  background-color: rgba(20, 17, 17, 0.747);
+}
+
+.inputbox {
+  position: relative;
+  width: 250px;
+}
+
+.inputbox input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #2f2f2f;
+  border: 1px solid lime;
+  outline: none;
+}
+
+span {
+  color: lime;
+  position: absolute;
+  left: 0;
+  padding: 8px;
+  transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  transform: translateX(10px);
+  /* transform: translateY(-9px); */
+  transform: translateY(45px);
+  text-transform: capitalize;
+  font-size: 0.95em;
+  padding: 0 10px;
+  color: lime;
+  background-color: #2f2f2f;
+  /* border-left: 2px solid lime;
+  border-right: 2px solid lime; */
+}
