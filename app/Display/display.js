@@ -1,41 +1,6 @@
-// "use client";
-// import React, { useState } from "react";
-
-// const Display = () => {
-//   const [showResult, setShowResult] = useState(false);
-//   let numberList = [2, 4, 6, 8];
-
-//   const recalculate = () => {
-//     let elementLength = numberList.map((num) => {
-//       return num * numberList.length;
-//     });
-
-//     const result = elementLength.join(", ");
-//     return result;
-//   };
-
-//   const handleToggle = () => {
-//     setShowResult(!showResult);
-//   };
-
-//   return (
-//     <div class="min-h-screen flex  flex-row items-center justify-center relative">
-//       <button
-//         onClick={handleToggle}
-//         className="bg-lime-500 hover:bg-lime-600 text-[#2F2F2F] font-bold py-2 px-4 rounded p-10 transition duration-500"
-//       >
-//         {showResult ? "Hide Result" : "Calculate"}
-//       </button>
-
-//       {showResult && <div> {recalculate()}</div>}
-//     </div>
-//   );
-// };
-
-// export default Display;
-
 "use client";
 import React, { useState } from "react";
+import "./display.css";
 
 const Display = () => {
   const [showResult, setShowResult] = useState(false);
@@ -52,13 +17,40 @@ const Display = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <button
-        onClick={handleToggle}
-        className="bg-lime-500 hover:bg-lime-600 text-[#2F2F2F] font-bold py-2 px-4 rounded p-3 shadow-md transition duration-500"
-      >
-        {showResult ? "Hide Result" : "Calculate"}
-      </button>
+    <div className=" main min-h-screen flex flex-col items-center justify-center">
+      {/* <div>
+        <span className="snake"></span>
+        <span className="snake"></span>
+        <span className="snake"></span>
+        <span className="snake"></span>
+        <button
+          onClick={handleToggle}
+          className=" toggleButton  text-[#2F2F2F] font-bold rounded  shadow-md transition duration-500 animate-moveButton"
+        >
+          {showResult ? (
+            <span className="calculate">Hide Result</span>
+          ) : (
+            <span className="calculate">Calculate</span>
+          )}
+        </button>
+      </div> */}
+
+      <div className="snake-container relative">
+        <span className="snake snake-top"></span>
+        <span className="snake snake-right"></span>
+        <button
+          onClick={handleToggle}
+          className="toggleButton text-[#2F2F2F] font-bold rounded shadow-md transition duration-500 animate-moveButton"
+        >
+          {showResult ? (
+            <span className="calculate">Hide Result</span>
+          ) : (
+            <span className="calculate">Calculate</span>
+          )}
+        </button>
+        <span className="snake snake-bottom"></span>
+        <span className="snake snake-left"></span>
+      </div>
 
       {showResult && (
         <div className="mt-4 p-3 border border-gray-300 rounded shadow-md">
