@@ -18,23 +18,6 @@ const Display = () => {
 
   return (
     <div className=" main min-h-screen flex flex-col items-center justify-center">
-      {/* <div>
-        <span className="snake"></span>
-        <span className="snake"></span>
-        <span className="snake"></span>
-        <span className="snake"></span>
-        <button
-          onClick={handleToggle}
-          className=" toggleButton  text-[#2F2F2F] font-bold rounded  shadow-md transition duration-500 animate-moveButton"
-        >
-          {showResult ? (
-            <span className="calculate">Hide Result</span>
-          ) : (
-            <span className="calculate">Calculate</span>
-          )}
-        </button>
-      </div> */}
-
       <div className="snake-container relative">
         <span className="snake snake-top"></span>
         <span className="snake snake-right"></span>
@@ -49,7 +32,10 @@ const Display = () => {
           )}
         </button>
         <span className="snake snake-bottom"></span>
-        <span className="snake snake-left"></span>
+        {/* <span className="snake snake-left"></span> */}
+        <div className="snake-left-container">
+          <span className="snake-left"></span>
+        </div>
       </div>
 
       {showResult && (
