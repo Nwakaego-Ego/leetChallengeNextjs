@@ -6,6 +6,7 @@ import InputMessage from "./InputMessage/InputMessage";
 import Counter from "./Counter/Counter";
 import Tobe from "./tobe";
 import Display from "./Display/display";
+import Projects from "../app/Projects/numList/page";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       {/* <InputMessage /> */}
       {/* <Counter /> */}
       {/* <Tobe /> */}
-      <Display />
+      {/* <Display /> */}
+      <Projects />
     </main>
   );
 }
