@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "debounce": "^1.2.1",
+    "formik": "^2.4.5",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
     "react-modal": "^3.16.1",
-    "use-debounce": "^9.0.4"
+    "use-debounce": "^9.0.4",
+    "yup": "^1.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10",

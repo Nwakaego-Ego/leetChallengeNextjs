@@ -7,6 +7,7 @@ import Counter from "./Counter/Counter";
 import Tobe from "./tobe";
 import Display from "./Display/display";
 import Projects from "../app/Projects/numList/page";
+import Form from "../app/Form/page";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       {/* <Counter /> */}
       {/* <Tobe /> */}
       {/* <Display /> */}
-      <Projects />
+      {/* <Projects /> */}
+      <Form />
     </main>
   );
 }
