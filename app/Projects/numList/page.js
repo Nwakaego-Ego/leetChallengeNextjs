@@ -1,5 +1,5 @@
 "use client";
-
+import "./numList.css";
 import React, { useState } from "react";
 
 const numList = () => {
@@ -27,31 +27,33 @@ const numList = () => {
   }
 
   return (
-    <>
-      <div>Dynamic Number List</div>
-      <input
-        type="text"
-        placeholder="Input initial value......"
-        onChange={initialInput}
-        className="text-black"
-      />
-      <input
-        type="text"
-        placeholder="Input number......"
-        className="m-10 text-black"
-        onChange={numsInput}
-      />
-      <button
-        onClick={reducerCalculator}
-        className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded p-10"
-      >
-        Result
-      </button>
+    <div className="card">
+      <div className="text-center">
+        <div>Dynamic Number List</div>
+        <input
+          type="text"
+          placeholder="Input initial value......"
+          onChange={initialInput}
+          className="text-black"
+        />
+        <input
+          type="text"
+          placeholder="Input number......"
+          className="m-10 text-black"
+          onChange={numsInput}
+        />
+        <button
+          onClick={reducerCalculator}
+          className="bg-[#CF46D0] hover-bg-blue-700 text-white font-bold py-2 px-4 rounded p-10"
+        >
+          Result
+        </button>
 
-      <p>Number: {nums}</p>
-      <p>Initial Value: {init}</p>
-      <p> Result: {result}</p>
-    </>
+        <p>Number: {nums}</p>
+        <p>Initial Value: {init}</p>
+        <p> Result: {result}</p>
+      </div>
+    </div>
   );
 };
 
