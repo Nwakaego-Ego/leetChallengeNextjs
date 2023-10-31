@@ -9,29 +9,34 @@ const FormVal = () => {
       .string()
       .min(3, "name cannot be more than 10 characters")
       .required("name cannot be empty"),
-    email: yup.string().email().required("Email cannot be empty"),
+    email: yup.string().email().required("add email"),
     password: yup
       .string()
       .min(8, "password should be 8 words minimum")
       .required("password cannot be empty"),
   });
 
-  const handleSubmit = async (value) => {
+  const handleSubmit = async (values) => {
+    console.log(values);
     try {
-      await schema.validate(value);
-      alert(Acess);
+      await schema.validate(values);
+      alert("Access");
     } catch (error) {
       alert("Access denied. Please check the form for errors.");
     }
   };
 
-  let initialValues = { name: " ", email: " ", password: "" };
+  let initialValues = { name: "", email: "", password: "" };
   return (
     <>
-      <div>
-        <p>User Registration Form</p>
-        <Formik initialValues={initialValues} validationSchema={schema}>
-          <Form onSubmit={handleSubmit}>
+      <p>User Registration Form</p>
+      <div className="container">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={schema}
+          onSubmit={handleSubmit}
+        >
+          <Form>
             <div className="">
               <div>
                 <label htmlFor="Name">Name</label>
