@@ -5,22 +5,63 @@
 }
 
 body {
-  background-image: url("/office.avif");
+  /* background-image: url("/office-img.avif"); */
   background-size: cover;
   overflow: hidden;
-  min-width: 750;
-  height: 100px;
-  /* background-image: url("https://i.stack.imgur.com/2OrtT.jpg"); */
+  height: 500px;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.container {
-  min-height: 100vh;
+.main-container {
+  /* min-height: 100vh; */
+  margin-top: 50px;
   display: flex;
 
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.cover {
+  /* position: absolute;
+  transform: translate(-50%, -50%); */
+  z-index: 999;
+  text-align: center;
+  padding: 60px 32px;
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: -1 4px 28px 0px rgba(0, 0, 0, 0, 0.75);
+}
+
+header {
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+}
+
+.field {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 1px 10px 20px 0 rgb(44, 43, 43);
+  outline: none;
+}
+
+.btn {
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 1px 10px 20px 0 rgb(44, 43, 43);
+  height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #af8239;
+}
+
+::placeholder {
+  padding-left: 10px;
 }

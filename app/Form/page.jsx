@@ -29,54 +29,62 @@ const FormVal = () => {
   let initialValues = { name: "", email: "", password: "" };
   return (
     <>
-      <p>User Registration Form</p>
-      <div className="container">
-        <Formik
-          initialValues={initialValues}
-          validationSchema={schema}
-          onSubmit={handleSubmit}
-        >
-          <Form>
-            <div className="">
-              <div>
-                <label htmlFor="Name">Name</label>
-                <Field
-                  name="name"
-                  id="name"
-                  type="text"
-                  className="text-black"
-                />
-                <div className="">
-                  <ErrorMessage name="name">{(msg) => msg}</ErrorMessage>
-                </div>
-              </div>
+      <div className="main-container">
+        <div className="cover">
+          <header>User Registration Form</header>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={schema}
+            onSubmit={handleSubmit}
+          >
+            <Form>
               <div className="">
-                <label htmlFor="email">Email</label>
-                <Field
-                  name="email"
-                  id="email"
-                  type="text"
-                  className="text-black "
-                />
-                <div className="error-message">
-                  <ErrorMessage name="email">{(msg) => msg}</ErrorMessage>
+                <div>
+                  <Field
+                    name="name"
+                    id="name"
+                    type="text"
+                    className="text-black field"
+                    placeholder="Name"
+                  />
+                  <div className="">
+                    <ErrorMessage name="name">{(msg) => msg}</ErrorMessage>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <Field
-                  name="password"
-                  id="password"
-                  type="password"
-                  className="text-black "
-                />
                 <div className="">
-                  <ErrorMessage name="password">{(msg) => msg}</ErrorMessage>
+                  <Field
+                    name="email"
+                    id="email"
+                    type="text"
+                    className="text-black field"
+                    placeholder="Email"
+                  />
+                  <div className="error-message">
+                    <ErrorMessage name="email">{(msg) => msg}</ErrorMessage>
+                  </div>
                 </div>
+                <div>
+                  <Field
+                    name="password"
+                    id="password"
+                    type="password"
+                    className="text-black field"
+                    placeholder="Password"
+                  />
+                  <div className="">
+                    <ErrorMessage name="password">{(msg) => msg}</ErrorMessage>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="btn bg-[#967339] text-white font-bold py-2 px-4 rounded"
+                >
+                  Submit
+                </button>
               </div>
-              <button type="submit">Submit</button>
-            </div>
-          </Form>
-        </Formik>
+            </Form>
+          </Formik>
+        </div>
       </div>
     </>
   );

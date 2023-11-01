@@ -8,6 +8,7 @@ import Tobe from "./tobe";
 import Display from "./Display/display";
 import Projects from "../app/Projects/numList/page";
 import Form from "../app/Form/page";
+import Qrcode from "../app/Qrcode/qrcode";
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
       {/* <Tobe /> */}
       {/* <Display /> */}
       {/* <Projects /> */}
-      <Form />
+      {/* <Form /> */}
+      <Qrcode />
     </main>
   );
 }
