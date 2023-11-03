@@ -1,3 +1,9 @@
 body {
-  background-color: red !important;
+  background-color: blue !important;
+  /* background-color: #f3c8ab !important; */
+}
+
+.qr {
+  border: 1px solid red;
+  padding: 20px;
 }
