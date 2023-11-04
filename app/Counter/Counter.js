@@ -51,31 +51,14 @@
 
 // export default Counter;
 
-import React from "react";
-import { useFormStatus } from "react-dom";
-import { submitForm } from "./actions.js";
-
-// Component for the submit button
-function Submit() {
-  const { pending } = useFormStatus();
-
-  return (
-    <button type="submit" disabled={pending}>
-      {pending ? "Submitting..." : "Submit"}
-    </button>
+export async function submitForm() {
+  await new Promise(
+    (resolve) =>
+      setTimeout(() => {
+        resolve({
+          success: true,
+          cartSize: 12,
+        });
+      }, 10000) // Simulating a 10-second delay
   );
-}
-
-// Component for the form
-function Form({ action }) {
-  return (
-    <form action={action}>
-      <Submit />
-    </form>
-  );
-}
-
-// Main App component
-export default function App() {
-  return <Form action={submitForm} />;
 }
